@@ -8,6 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <NSXMLParserDelegate> {
+    
+    // section1
+    IBOutlet UIImageView *todayWeather;
+    IBOutlet UILabel *todayTemperature;
+    IBOutlet UILabel *todayHumidity;
+    
+    // section2 
+    IBOutlet UIImageView *tomorrowWeather;
+    IBOutlet UILabel *tomorrowTemperature;
+    IBOutlet UILabel *tomorrowHumidity;
+
+    // API response data.
+    NSMutableData *weatherData;
+}
 
 @end

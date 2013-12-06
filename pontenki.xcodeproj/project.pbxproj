@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		58533DDB1852049D0009B843 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58533DDA1852049D0009B843 /* Foundation.framework */; };
+		58533DDD1852049D0009B843 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58533DDC1852049D0009B843 /* CoreGraphics.framework */; };
+		58533DDF1852049D0009B843 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58533DDE1852049D0009B843 /* UIKit.framework */; };
+		58533DE51852049D0009B843 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 58533DE31852049D0009B843 /* InfoPlist.strings */; };
+		58533DE71852049D0009B843 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58533DE61852049D0009B843 /* main.m */; };
+		58533DEB1852049D0009B843 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58533DEA1852049D0009B843 /* AppDelegate.m */; };
+		58533DEE1852049D0009B843 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58533DEC1852049D0009B843 /* Main.storyboard */; };
+		58533DF11852049D0009B843 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58533DF01852049D0009B843 /* ViewController.m */; };
+		58533DF31852049D0009B843 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58533DF21852049D0009B843 /* Images.xcassets */; };
+		58533DFA1852049D0009B843 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58533DF91852049D0009B843 /* XCTest.framework */; };
+		58533DFB1852049D0009B843 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58533DDA1852049D0009B843 /* Foundation.framework */; };
+		58533DFC1852049D0009B843 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58533DDE1852049D0009B843 /* UIKit.framework */; };
+		58533E041852049D0009B843 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 58533E021852049D0009B843 /* InfoPlist.strings */; };
+		58533E061852049D0009B843 /* pontenkiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58533E051852049D0009B843 /* pontenkiTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		58533DFD1852049D0009B843 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 58533DCF1852049D0009B843 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58533DD61852049D0009B843;
+			remoteInfo = pontenki;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		58533DD71852049D0009B843 /* pontenki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pontenki.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		58533DDA1852049D0009B843 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		58533DDC1852049D0009B843 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		58533DDE1852049D0009B843 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		58533DE21852049D0009B843 /* pontenki-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "pontenki-Info.plist"; sourceTree = "<group>"; };
+		58533DE41852049D0009B843 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		58533DE61852049D0009B843 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		58533DE81852049D0009B843 /* pontenki-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pontenki-Prefix.pch"; sourceTree = "<group>"; };
+		58533DE91852049D0009B843 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		58533DEA1852049D0009B843 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		58533DED1852049D0009B843 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		58533DEF1852049D0009B843 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		58533DF01852049D0009B843 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		58533DF21852049D0009B843 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		58533DF81852049D0009B843 /* pontenkiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pontenkiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		58533DF91852049D0009B843 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		58533E011852049D0009B843 /* pontenkiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "pontenkiTests-Info.plist"; sourceTree = "<group>"; };
+		58533E031852049D0009B843 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		58533E051852049D0009B843 /* pontenkiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pontenkiTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		58533DD41852049D0009B843 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58533DDD1852049D0009B843 /* CoreGraphics.framework in Frameworks */,
+				58533DDF1852049D0009B843 /* UIKit.framework in Frameworks */,
+				58533DDB1852049D0009B843 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58533DF51852049D0009B843 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58533DFA1852049D0009B843 /* XCTest.framework in Frameworks */,
+				58533DFC1852049D0009B843 /* UIKit.framework in Frameworks */,
+				58533DFB1852049D0009B843 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		58533DCE1852049D0009B843 = {
+			isa = PBXGroup;
+			children = (
+				58533DE01852049D0009B843 /* pontenki */,
+				58533DFF1852049D0009B843 /* pontenkiTests */,
+				58533DD91852049D0009B843 /* Frameworks */,
+				58533DD81852049D0009B843 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		58533DD81852049D0009B843 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				58533DD71852049D0009B843 /* pontenki.app */,
+				58533DF81852049D0009B843 /* pontenkiTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		58533DD91852049D0009B843 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58533DDA1852049D0009B843 /* Foundation.framework */,
+				58533DDC1852049D0009B843 /* CoreGraphics.framework */,
+				58533DDE1852049D0009B843 /* UIKit.framework */,
+				58533DF91852049D0009B843 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		58533DE01852049D0009B843 /* pontenki */ = {
+			isa = PBXGroup;
+			children = (
+				58533DE91852049D0009B843 /* AppDelegate.h */,
+				58533DEA1852049D0009B843 /* AppDelegate.m */,
+				58533DEC1852049D0009B843 /* Main.storyboard */,
+				58533DEF1852049D0009B843 /* ViewController.h */,
+				58533DF01852049D0009B843 /* ViewController.m */,
+				58533DF21852049D0009B843 /* Images.xcassets */,
+				58533DE11852049D0009B843 /* Supporting Files */,
+			);
+			path = pontenki;
+			sourceTree = "<group>";
+		};
+		58533DE11852049D0009B843 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				58533DE21852049D0009B843 /* pontenki-Info.plist */,
+				58533DE31852049D0009B843 /* InfoPlist.strings */,
+				58533DE61852049D0009B843 /* main.m */,
+				58533DE81852049D0009B843 /* pontenki-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		58533DFF1852049D0009B843 /* pontenkiTests */ = {
+			isa = PBXGroup;
+			children = (
+				58533E051852049D0009B843 /* pontenkiTests.m */,
+				58533E001852049D0009B843 /* Supporting Files */,
+			);
+			path = pontenkiTests;
+			sourceTree = "<group>";
+		};
+		58533E001852049D0009B843 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				58533E011852049D0009B843 /* pontenkiTests-Info.plist */,
+				58533E021852049D0009B843 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		58533DD61852049D0009B843 /* pontenki */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58533E091852049D0009B843 /* Build configuration list for PBXNativeTarget "pontenki" */;
+			buildPhases = (
+				58533DD31852049D0009B843 /* Sources */,
+				58533DD41852049D0009B843 /* Frameworks */,
+				58533DD51852049D0009B843 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = pontenki;
+			productName = pontenki;
+			productReference = 58533DD71852049D0009B843 /* pontenki.app */;
+			productType = "com.apple.product-type.application";
+		};
+		58533DF71852049D0009B843 /* pontenkiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58533E0C1852049D0009B843 /* Build configuration list for PBXNativeTarget "pontenkiTests" */;
+			buildPhases = (
+				58533DF41852049D0009B843 /* Sources */,
+				58533DF51852049D0009B843 /* Frameworks */,
+				58533DF61852049D0009B843 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				58533DFE1852049D0009B843 /* PBXTargetDependency */,
+			);
+			name = pontenkiTests;
+			productName = pontenkiTests;
+			productReference = 58533DF81852049D0009B843 /* pontenkiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		58533DCF1852049D0009B843 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = masapp;
+				TargetAttributes = {
+					58533DF71852049D0009B843 = {
+						TestTargetID = 58533DD61852049D0009B843;
+					};
+				};
+			};
+			buildConfigurationList = 58533DD21852049D0009B843 /* Build configuration list for PBXProject "pontenki" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 58533DCE1852049D0009B843;
+			productRefGroup = 58533DD81852049D0009B843 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				58533DD61852049D0009B843 /* pontenki */,
+				58533DF71852049D0009B843 /* pontenkiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		58533DD51852049D0009B843 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58533DF31852049D0009B843 /* Images.xcassets in Resources */,
+				58533DE51852049D0009B843 /* InfoPlist.strings in Resources */,
+				58533DEE1852049D0009B843 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58533DF61852049D0009B843 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58533E041852049D0009B843 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		58533DD31852049D0009B843 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58533DF11852049D0009B843 /* ViewController.m in Sources */,
+				58533DEB1852049D0009B843 /* AppDelegate.m in Sources */,
+				58533DE71852049D0009B843 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58533DF41852049D0009B843 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58533E061852049D0009B843 /* pontenkiTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		58533DFE1852049D0009B843 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 58533DD61852049D0009B843 /* pontenki */;
+			targetProxy = 58533DFD1852049D0009B843 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		58533DE31852049D0009B843 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				58533DE41852049D0009B843 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		58533DEC1852049D0009B843 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				58533DED1852049D0009B843 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		58533E021852049D0009B843 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				58533E031852049D0009B843 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		58533E071852049D0009B843 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		58533E081852049D0009B843 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		58533E0A1852049D0009B843 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "pontenki/pontenki-Prefix.pch";
+				INFOPLIST_FILE = "pontenki/pontenki-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		58533E0B1852049D0009B843 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "pontenki/pontenki-Prefix.pch";
+				INFOPLIST_FILE = "pontenki/pontenki-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		58533E0D1852049D0009B843 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/pontenki.app/pontenki";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "pontenki/pontenki-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "pontenkiTests/pontenkiTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		58533E0E1852049D0009B843 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/pontenki.app/pontenki";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "pontenki/pontenki-Prefix.pch";
+				INFOPLIST_FILE = "pontenkiTests/pontenkiTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		58533DD21852049D0009B843 /* Build configuration list for PBXProject "pontenki" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58533E071852049D0009B843 /* Debug */,
+				58533E081852049D0009B843 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58533E091852049D0009B843 /* Build configuration list for PBXNativeTarget "pontenki" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58533E0A1852049D0009B843 /* Debug */,
+				58533E0B1852049D0009B843 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		58533E0C1852049D0009B843 /* Build configuration list for PBXNativeTarget "pontenkiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58533E0D1852049D0009B843 /* Debug */,
+				58533E0E1852049D0009B843 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 58533DCF1852049D0009B843 /* Project object */;
+}

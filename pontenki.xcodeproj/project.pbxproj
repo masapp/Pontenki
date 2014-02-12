@@ -21,6 +21,7 @@
 		58533DFC1852049D0009B843 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58533DDE1852049D0009B843 /* UIKit.framework */; };
 		58533E041852049D0009B843 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 58533E021852049D0009B843 /* InfoPlist.strings */; };
 		58533E061852049D0009B843 /* pontenkiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58533E051852049D0009B843 /* pontenkiTests.m */; };
+		586F9E1E189D2AFA0097B7C5 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 586F9E1D189D2AFA0097B7C5 /* SettingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		58533E011852049D0009B843 /* pontenkiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "pontenkiTests-Info.plist"; sourceTree = "<group>"; };
 		58533E031852049D0009B843 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		58533E051852049D0009B843 /* pontenkiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pontenkiTests.m; sourceTree = "<group>"; };
+		586F9E1C189D2AFA0097B7C5 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		586F9E1D189D2AFA0097B7C5 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				58533DEC1852049D0009B843 /* Main.storyboard */,
 				58533DEF1852049D0009B843 /* ViewController.h */,
 				58533DF01852049D0009B843 /* ViewController.m */,
+				586F9E1C189D2AFA0097B7C5 /* SettingViewController.h */,
+				586F9E1D189D2AFA0097B7C5 /* SettingViewController.m */,
 				58533DF21852049D0009B843 /* Images.xcassets */,
 				58533DE11852049D0009B843 /* Supporting Files */,
 			);
@@ -252,6 +257,7 @@
 				58533DF11852049D0009B843 /* ViewController.m in Sources */,
 				58533DEB1852049D0009B843 /* AppDelegate.m in Sources */,
 				58533DE71852049D0009B843 /* main.m in Sources */,
+				586F9E1E189D2AFA0097B7C5 /* SettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +384,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: masayuki ishikawa (7TW2YU8GZA)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "pontenki/pontenki-Prefix.pch";
 				INFOPLIST_FILE = "pontenki/pontenki-Info.plist";
@@ -391,6 +398,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: masayuki ishikawa (7TW2YU8GZA)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "pontenki/pontenki-Prefix.pch";
 				INFOPLIST_FILE = "pontenki/pontenki-Info.plist";
@@ -460,6 +468,7 @@
 				58533E0B1852049D0009B843 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		58533E0C1852049D0009B843 /* Build configuration list for PBXNativeTarget "pontenkiTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +477,7 @@
 				58533E0E1852049D0009B843 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,36 +8,105 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
-
-@end
 
 @implementation ViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
     
-    // get the temperature data saved in settingViewController.
+    // Initialize the array for wearther data
+    date = [NSMutableArray array];
+    weather = [NSMutableArray array];
+    temperatures = [NSMutableArray array];
+    humidities = [NSMutableArray array];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+
+    // Get the city name saved in settingViewController.
     NSUserDefaults *cityData = [NSUserDefaults standardUserDefaults];
-    NSString *woeid = [cityData stringForKey:@"CITY"];
+    NSString *cityName = [cityData stringForKey:@"CITY"];
+    if (cityName == nil) {
+        cityName = @"London";
+    }
+    
+    // Get the wearther data from API
+    NSString *URLString = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/forecast/daily?q=%@&mode=xml&units=metric&cnt=2", cityName];
+    NSXMLParser *parser = [[NSXMLParser alloc] initWithContentsOfURL:[NSURL URLWithString:URLString]];
+    [parser setDelegate:self];
+    [parser parse];
+    
+    // Set weather data
+    todayWeather.text = [NSString stringWithFormat:@"%@", [weather objectAtIndex:0]];
+    tomorrowWeather.text = [NSString stringWithFormat:@"%@", [weather objectAtIndex:1]];
+    
+    // Set humidity data
+    todayHumidity.text = [NSString stringWithFormat:@"%@％", [humidities objectAtIndex:0]];
+    tomorrowHumidity.text = [NSString stringWithFormat:@"%@％", [humidities objectAtIndex:1]];
+    
+    // Set temperature data
+    [self setTemperature];
+    
+    // Call segment value changed
+    [unit addTarget:self action:@selector(changeUnit:) forControlEvents:UIControlEventValueChanged];
 }
 
-- (void)didReceiveMemoryWarning
+// Change the header of section
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    return [date objectAtIndex:section];
 }
 
-- (int)CfromF:(int)_fahrenheit
+// Raceive API response
+- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
 {
-    return 5.0 / 9.0 * (_fahrenheit - 32);
+    //NSLog(@"%@ %@", elementName, attributeDict);
+    if ([elementName isEqual:@"time"]) {
+        [date addObject:[attributeDict objectForKey:@"day"]];
+    }
+    if ([elementName isEqual:@"symbol"]) {
+        [weather addObject:[attributeDict objectForKey:@"name"]];
+    }
+    if ([elementName isEqual:@"temperature"]) {
+        [temperatures addObject:[attributeDict objectForKey:@"max"]];
+        [temperatures addObject:[attributeDict objectForKey:@"min"]];
+    }
+    if ([elementName isEqual:@"humidity"]) {
+        [humidities addObject:[attributeDict objectForKey:@"value"]];
+    }
+}
+
+// Change temperature unit
+- (void)changeUnit:(UISegmentedControl *)segment
+{
+    [self setTemperature];
+}
+
+// Set temperature data 
+- (void)setTemperature
+{
+    float todayMax = [[temperatures objectAtIndex:0] floatValue];
+    float todayMin = [[temperatures objectAtIndex:1] floatValue];
+    float tomorrowMax = [[temperatures objectAtIndex:2] floatValue];
+    float tomorrowMin = [[temperatures objectAtIndex:3] floatValue];
+
+    if (unit.selectedSegmentIndex == 1) {
+        todayMax = [self FfromC:todayMax];
+        todayMin = [self FfromC:todayMin];
+        tomorrowMax = [self FfromC:tomorrowMax];
+        tomorrowMin = [self FfromC:tomorrowMin];
+    }
+    todayTemperature.text = [NSString stringWithFormat:@"%.1f / %.1f", todayMax, todayMin];
+    tomorrowTemperature.text = [NSString stringWithFormat:@"%.1f / %.1f", tomorrowMax, tomorrowMin];
+}
+
+// Convert Celsius to Fahrenheit
+- (float)FfromC:(float)Celsius
+{
+    return 9.0 / 5.0 * (Celsius + 32);
 }
 
 @end

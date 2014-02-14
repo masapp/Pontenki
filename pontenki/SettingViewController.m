@@ -20,11 +20,16 @@
     return self;
 }
 
-- (void)viewDidLoad
+- (void)viewDidAppear:(BOOL)animated
 {
-    [super viewDidLoad];
+    [super viewDidAppear:animated];
+    [self setCheckMark];
+}
 
-};
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    [self setCheckMark];
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -45,5 +50,21 @@
     }
 }
 
+- (void)setCheckMark
+{
+    // Get data for save
+    NSUserDefaults *cityData = [NSUserDefaults standardUserDefaults];
+    cityName = [cityData stringForKey:@"CITY"];
+    
+    // Get display cell data
+    NSArray *cells = [self.tableView visibleCells];
+    
+    for (NSInteger i = 0; i < [cells count]; i++) {
+        UITableViewCell *cell = cells[i];
+        if ([cell.textLabel.text isEqualToString:cityName]) {
+            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        }
+    }
+}
 
 @end

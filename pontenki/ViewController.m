@@ -39,6 +39,9 @@
     [parser setDelegate:self];
     [parser parse];
     
+    // Set navigation title
+    self.navigationItem.title = cityName;
+
     // Set weather data
     todayWeather.text = [NSString stringWithFormat:@"%@", [weather objectAtIndex:0]];
     tomorrowWeather.text = [NSString stringWithFormat:@"%@", [weather objectAtIndex:1]];

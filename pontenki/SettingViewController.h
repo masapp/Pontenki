@@ -12,7 +12,7 @@
     
     NSIndexPath *checkMark;
     NSIndexPath *selectedCity;
-    NSString * cityName;
+    NSString *cityName;
 }
 
 @end

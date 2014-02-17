@@ -16,10 +16,10 @@
     [super viewDidLoad];
     
     // Initialize the array for wearther data
-    date = [NSMutableArray array];
-    weather = [NSMutableArray array];
-    temperatures = [NSMutableArray array];
-    humidities = [NSMutableArray array];
+    date = [NSMutableArray arrayWithObjects:@"", @"", nil];
+    weather = [NSMutableArray arrayWithObjects:@"unknown", @"unknown", nil];
+    temperatures = [NSMutableArray arrayWithObjects:@"0", @"0", @"0", @"0", nil];
+    humidities = [NSMutableArray arrayWithObjects:@"0", @"0", nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -41,12 +41,18 @@
     
     // Set navigation title
     self.navigationItem.title = cityName;
-
+    
     // Set weather data
+    if ([weather count] > 2) {
+        [weather removeObjectsInRange:NSMakeRange(0, 2)];
+    }
     todayWeather.text = [NSString stringWithFormat:@"%@", [weather objectAtIndex:0]];
     tomorrowWeather.text = [NSString stringWithFormat:@"%@", [weather objectAtIndex:1]];
     
     // Set humidity data
+    if ([humidities count] > 2) {
+        [humidities removeObjectsInRange:NSMakeRange(0, 2)];
+    }
     todayHumidity.text = [NSString stringWithFormat:@"%@％", [humidities objectAtIndex:0]];
     tomorrowHumidity.text = [NSString stringWithFormat:@"%@％", [humidities objectAtIndex:1]];
     
@@ -60,13 +66,16 @@
 // Change the header of section
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
+    if ([date count] > 2) {
+        [date removeObjectsInRange:NSMakeRange(0, 2)];
+    }
     return [date objectAtIndex:section];
 }
 
 // Raceive API response
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
 {
-    //NSLog(@"%@ %@", elementName, attributeDict);
+    // NSLog(@"%@ %@", elementName, attributeDict);
     if ([elementName isEqual:@"time"]) {
         [date addObject:[attributeDict objectForKey:@"day"]];
     }
@@ -91,6 +100,9 @@
 // Set temperature data 
 - (void)setTemperature
 {
+    if ([temperatures count] > 4) {
+        [temperatures removeObjectsInRange:NSMakeRange(0, 4)];
+    }
     float todayMax = [[temperatures objectAtIndex:0] floatValue];
     float todayMin = [[temperatures objectAtIndex:1] floatValue];
     float tomorrowMax = [[temperatures objectAtIndex:2] floatValue];

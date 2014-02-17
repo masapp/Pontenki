@@ -11,15 +11,6 @@
 
 @implementation SettingViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
@@ -41,15 +32,10 @@
     NSUserDefaults *cityData = [NSUserDefaults standardUserDefaults];
     [cityData setObject:cityName forKey:@"CITY"];
     
-    // Check in the selected cell
-    UITableViewCell *checkedCell = [tableView cellForRowAtIndexPath:checkMark];
-    if (cell.accessoryType == UITableViewCellAccessoryNone) {
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;
-        checkedCell.accessoryType = UITableViewCellAccessoryNone;
-        checkMark = indexPath;
-    }
+    [self setCheckMark];
 }
 
+// Check in the selected cell
 - (void)setCheckMark
 {
     // Get data for save
@@ -63,6 +49,9 @@
         UITableViewCell *cell = cells[i];
         if ([cell.textLabel.text isEqualToString:cityName]) {
             cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        }
+        else {
+            cell.accessoryType = UITableViewCellAccessoryNone;
         }
     }
 }
